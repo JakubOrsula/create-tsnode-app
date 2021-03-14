@@ -23,7 +23,7 @@ fs.writeFileSync("package.json", contents);
 console.log("Working please wait...");
 [
     "npm i @types/node typescript ts-node",
-    "npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/eslint-plugin-tslint @typescript-eslint/parser eslint eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-prefer-arrow",
+    "npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/eslint-plugin-tslint @typescript-eslint/parser eslint eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-prefer-arrow tslint",
     "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/.eslintignore",
     "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/.eslintrc.js",
     "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/index.ts",
