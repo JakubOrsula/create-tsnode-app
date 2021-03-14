@@ -3,14 +3,28 @@
 'use strict'
 
 const fs = require('fs');
-const path = require('path');
-const yargs = require('yargs').usage(`
-    Usage: $0 name-of-your-app
-`)
+const { execSync } = require("child_process");
 
-const argv = yargs.argv()
 
-console.log(`Hello, you argv is: ${JSON.stringify(argv)}`)
+if (process.argv.length < 3) {
+    console.log('Specify project name please')
+    return;
+}
 
-fs.mkdirSync(argv)
+console.log(`Project name is: ${JSON.stringify(process.argv[2])}`)
+fs.mkdirSync(process.argv[2])
+process.chdir(process.argv[2])
+execSync(`npm init -y`)
 
+// this is bad, todo find a better way
+
+const contents = fs.readFileSync("package.json", {encoding: "utf-8", flag: 'r'}).replace("index.js", "index.ts");
+
+fs.writeFileSync("package.json", contents);
+
+[
+    "npm i @types/node typescript ts-node",
+    "npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/eslint-plugin-tslint @typescript-eslint/parser eslint eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-prefer-arrow tslint",
+    "wget "
+]
+execSync('npm i -D ')
