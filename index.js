@@ -26,14 +26,15 @@ console.log("Working please wait...");
     "npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/eslint-plugin-tslint @typescript-eslint/parser eslint eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-prefer-arrow",
     "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/.eslintignore",
     "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/.eslintrc.js",
-    "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/index.ts"
+    "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/index.ts",
+    "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/tsconfig.json"
 ].forEach((command) => {
     try {
         console.log(`Executing: ${command}`)
         execSync(command);
     } catch (e) {
         console.log(e)
-        console.log("Sorry something went wrong. Try to read the errors.")
+        console.log("Sorry something went wrong. Try to read the errors, delete created dir and try again.")
         process.exit(1);
     }
 })
