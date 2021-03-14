@@ -1,6 +1,6 @@
 {
   "name": "@xorsula/create-tsnode-app",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "Create tsnode app with elint linting and some sane defaults",
   "main": "index.js",
   "scripts": {
