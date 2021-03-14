@@ -19,12 +19,12 @@ execSync(`npm init -y`)
 // this is bad, todo find a better way
 
 const contents = fs.readFileSync("package.json", {encoding: "utf-8", flag: 'r'}).replace("index.js", "index.ts");
-
 fs.writeFileSync("package.json", contents);
 
 [
     "npm i @types/node typescript ts-node",
     "npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/eslint-plugin-tslint @typescript-eslint/parser eslint eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-prefer-arrow tslint",
-    "wget "
-]
-execSync('npm i -D ')
+    "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/.eslintignore",
+    "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/.eslintrc.js"
+].forEach(command => execSync(command))
+
