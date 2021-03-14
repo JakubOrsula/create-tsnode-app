@@ -1,0 +1,25 @@
+{
+  "name": "create-tsnode-app",
+  "version": "1.0.0",
+  "description": "Create tsnode app with elint linting and some sane defaults",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakubOrsula/create-tsnode-app.git"
+  },
+  "keywords": [
+    "tsnode"
+  ],
+  "author": "Jakub Orsula",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JakubOrsula/create-tsnode-app/issues"
+  },
+  "homepage": "https://github.com/JakubOrsula/create-tsnode-app#readme",
+  "dependencies": {
+    "yargs": "^16.2.0"
+  }
+}
