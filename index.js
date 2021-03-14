@@ -9,4 +9,7 @@ const yargs = require('yargs').usage(`
 `)
 
 const argv = yargs.argv()
+
+console.log(`Hello, you argv is: ${JSON.stringify(argv)}`)
+
 fs.mkdirSync(argv)
