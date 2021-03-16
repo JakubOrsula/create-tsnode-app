@@ -27,7 +27,8 @@ console.log("Working please wait...");
     "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/.eslintignore",
     "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/.eslintrc.js",
     "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/index.ts",
-    "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/tsconfig.json"
+    "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/tsconfig.json",
+    "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/.prettierrc.js"
 ].forEach((command) => {
     try {
         console.log(`Executing: ${command}`)
