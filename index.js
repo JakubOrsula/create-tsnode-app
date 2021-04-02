@@ -2,6 +2,8 @@
 
 'use strict'
 
+import path from "path";
+
 const fs = require('fs');
 const { execSync } = require("child_process");
 
@@ -20,15 +22,22 @@ execSync(`npm init -y`)
 const contents = fs.readFileSync("package.json", {encoding: "utf-8", flag: 'r'}).replace("index.js", "index.ts");
 fs.writeFileSync("package.json", contents);
 
-console.log("Working please wait...");
+console.log('copying files')
+
+await Promise.all([
+  ".eslintignore",
+  ".eslintrc.js",
+  "index.ts",
+  "tsconfig.json",
+  ".prettierrc.js"
+].map(f => {
+    fs.promises.copyFile(path.join('.rsrc', f), f);
+}));
+
+console.log("installing...");
 [
     "npm i @types/node typescript ts-node",
     "npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/eslint-plugin-tslint @typescript-eslint/parser eslint eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-prefer-arrow tslint",
-    "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/.eslintignore",
-    "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/.eslintrc.js",
-    "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/index.ts",
-    "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/tsconfig.json",
-    "wget https://raw.githubusercontent.com/JakubOrsula/create-tsnode-app/master/rsrc/.prettierrc.js"
 ].forEach((command) => {
     try {
         console.log(`Executing: ${command}`)
