@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/JakubOrsula/create-tsnode-app#readme",
   "dependencies": {
-    "yargs": "^16.2.0"
   },
   "publishConfig": {
     "access": "public"
