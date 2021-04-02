@@ -23,7 +23,7 @@ fs.writeFileSync("package.json", contents);
 
 console.log('copying files')
 
-await Promise.all([
+Promise.all([
   ".eslintignore",
   ".eslintrc.js",
   "index.ts",
@@ -31,20 +31,19 @@ await Promise.all([
   ".prettierrc.js"
 ].map(f => {
     fs.promises.copyFile(path.join('.rsrc', f), f);
-}));
-
-console.log("installing...");
-[
+})).then(() => {
+  console.log("installing...");
+  [
     "npm i @types/node typescript ts-node",
     "npm i -D @typescript-eslint/eslint-plugin @typescript-eslint/eslint-plugin-tslint @typescript-eslint/parser eslint eslint-plugin-import eslint-plugin-jsdoc eslint-plugin-prefer-arrow tslint",
-].forEach((command) => {
+  ].forEach((command) => {
     try {
-        console.log(`Executing: ${command}`)
-        execSync(command);
+      console.log(`Executing: ${command}`)
+      execSync(command);
     } catch (e) {
-        console.log(e)
-        console.log("Sorry something went wrong. Try to read the errors, delete created dir and try again.")
-        process.exit(1);
+      console.log(e)
+      console.log("Sorry something went wrong. Try to read the errors, delete created dir and try again.")
+      process.exit(1);
     }
-})
-
+  })
+});
