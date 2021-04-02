@@ -23,6 +23,8 @@ fs.writeFileSync("package.json", contents);
 
 console.log('copying files');
 
+
+//todo create a build script which will inject these files
   [
   [".eslintignore", "node_modules\n" +
   "*.js\n" +
