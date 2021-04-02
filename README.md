@@ -4,5 +4,5 @@ A little helper to create node apps. PRs are welcome.
 
 ## usage
 
-`npx npx @xorsula/create-tsnode-app <name-of-your-project>`
+`npx @xorsula/create-tsnode-app <name-of-your-project>`
 
