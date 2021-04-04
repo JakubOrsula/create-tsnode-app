@@ -279,7 +279,7 @@ console.log('copying files');
     "            {\n" +
     "                \"rules\": {\n" +
     "                    \"import-spacing\": true,\n" +
-    "                    \"object-literal-sort-keys\": true,\n" +
+    "                    \"object-literal-sort-keys\": false,\n" +
     "                    \"whitespace\": [\n" +
     "                        true,\n" +
     "                        \"check-branch\",\n" +
