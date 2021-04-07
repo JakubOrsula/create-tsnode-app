@@ -23,14 +23,13 @@ fs.writeFileSync('package.json', contents);
 
 console.log('copying files');
 
-
-  [
-  ['.eslintignore', 'REPLACE.eslintignore'],
-    ['.eslintrc.js', 'REPLACE.eslintrc.js'],
-      ['index.ts', 'REPLACEindex.ts'],
-    ['tsconfig.json', 'REPLACEtsconfig.json'],
-    ['.prettierrc.js', 'REPLACE.prettierrc.js']
-  ].forEach(([f, contents]) => fs.writeFileSync(f, contents)) //todo maybe parallelize
+[
+['.eslintignore', 'REPLACE.eslintignore'],
+  ['.eslintrc.js', 'REPLACE.eslintrc.js'],
+    ['index.ts', 'REPLACEindex.ts'],
+  ['tsconfig.json', 'REPLACEtsconfig.json'],
+  ['.prettierrc.js', 'REPLACE.prettierrc.js']
+].forEach(([f, contents]) => fs.writeFileSync(f, contents)) //todo maybe parallelize
 
 console.log('copying done\ninstalling...');
 
