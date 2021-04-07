@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 0",
     "build": "node build.js",
-    "deploy": "npm run build && lazygit && npx np --no-2fa"
+    "deploy": "npm run build && npx np --no-2fa"
   },
   "bin": {
     "create-tsnode-app": "./indexProd.js"
