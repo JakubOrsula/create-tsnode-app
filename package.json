@@ -4,10 +4,12 @@
   "description": "Create tsnode app with elint linting and some sane defaults",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 0"
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "build": "node build.js",
+    "deploy": "npm run build && lazygit && npx np --no-2fa"
   },
   "bin": {
-    "create-tsnode-app": "./index.js"
+    "create-tsnode-app": "./indexProd.js"
   },
   "repository": {
     "type": "git",
