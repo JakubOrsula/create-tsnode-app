@@ -3,7 +3,7 @@
 https://github.com/typescript-eslint/tslint-to-eslint-config
 
 It represents the closest reasonable ESLint configuration to this
-project's original TSLint configuration.
+projects original TSLint configuration.
 
 We recommend eventually switching this configuration to extend from
 the recommended rulesets in typescript-eslint.
