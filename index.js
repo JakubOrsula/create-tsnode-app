@@ -24,7 +24,6 @@ fs.writeFileSync('package.json', contents);
 console.log('copying files');
 
 
-//todo create a build script which will inject these files
   [
   ['.eslintignore', 'REPLACE.eslintignore'],
     ['.eslintrc.js', 'REPLACE.eslintrc.js'],
@@ -33,7 +32,7 @@ console.log('copying files');
     ['.prettierrc.js', 'REPLACE.prettierrc.js']
   ].forEach(([f, contents]) => fs.writeFileSync(f, contents)) //todo maybe parallelize
 
-console.log('installing...');
+console.log('copying done\ninstalling...');
 
 [
   'npm i @types/node typescript ts-node',
