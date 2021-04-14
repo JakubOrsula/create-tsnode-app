@@ -28,6 +28,7 @@ console.log('copying files');
   ['.eslintrc.js', 'REPLACE.eslintrc.js'],
     ['index.ts', 'REPLACEindex.ts'],
   ['tsconfig.json', 'REPLACEtsconfig.json'],
+  ['.gitignore', 'REPLACE.gitignore'],
   ['.prettierrc.js', 'REPLACE.prettierrc.js']
 ].forEach(([f, contents]) => fs.writeFileSync(f, contents)) //todo maybe parallelize
 
